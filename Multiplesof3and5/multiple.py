@@ -5,6 +5,7 @@ def multiples(elements, r):
             if( i % e == 0):
                 print i
                 total += i
+                break
     return total
 
-multiples([3,5],10)
+print multiples([3,5],99)
