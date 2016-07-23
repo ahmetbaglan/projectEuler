@@ -17,4 +17,4 @@ def largestPolindrome(digit1,digit2):
 
 
 
-print largestPolindrome(3,4)
+print largestPolindrome(2,2)
