@@ -1,4 +1,5 @@
 import math
+import time
 def isPrime(a,l):
 
     index = 0
@@ -17,4 +18,7 @@ def sumPrimes(n):
 
     return sum(primes)
 
+
+start = time.clock()
 print sumPrimes(2*(10**6))
+print "Time past =", time.clock()-start
