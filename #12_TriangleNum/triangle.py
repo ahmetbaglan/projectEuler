@@ -1,3 +1,4 @@
+import time
 def m(n):
     k = n
     d ={}
@@ -34,4 +35,7 @@ def bul(k):
     print d
     return sayi
 
+
+start = time.clock()
 print bul(500)
+print "time elapsed : ", time.clock()-start 
