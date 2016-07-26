@@ -100,29 +100,41 @@ a = """37107287533902102798797998220837590246510135740250
 53503534226472524250874054075591789781264330331690"""
 
 lines = a.split("\n")
-l = []
-eldevar = 0
+def duzelt(lines):
+    m = 0
+    out = []
+    for l in lines:
+        if(len(l)>m):
+            m = len(l)
+    for l in lines:
+        if((m - len(l))>0):
+            l = ('0'*(m-len(l))) + l
 
-# lines = ["829","255"]
+        out.append(l)
+    return out
 
-for i in range(len(lines[0])-1,-1,-1):
-    top = 0
-    for k in lines:
-        top += int(k[i])
-        top += eldevar
-        eldevar = 0
-    if(top >= 10):
-        eldevar = top / 10
-    l.append(top % 10)
+def topla(lines):
+    l = []
+    eldevar = 0
+    for i in range(len(lines[0])-1,-1,-1):
+        top = 0
+        for k in lines:
+            top += int(k[i])
+            top += eldevar
+            eldevar = 0
+        if(top >= 10):
+            eldevar = top / 10
+        l.append(top % 10)
 
-if( eldevar > 0):
-    for s in str(eldevar)[::-1]:
-        l.append(s)
+    if( eldevar > 0):
+        for s in str(eldevar)[::-1]:
+            l.append(s)
 
-l = l[::-1]
+    l = l[::-1]
+    return  l
 
 
-print l[:10]
+print topla(lines)[:10]
 
 
 
