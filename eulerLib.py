@@ -108,5 +108,18 @@ def getEvenDivisors(n):
     return out
 
 
+def perm(l):
+    l = sorted(l)
+    b = l[:]
+    out = []
+    if(len(l) == 1):
+        return  [(l[0],)]
+    for i in l:
+        b.remove(i)
+        for k in perm(b):
+            out.append((i,) + k)
+        b = l[:]
+    return out
+
 
 
