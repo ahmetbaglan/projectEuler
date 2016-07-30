@@ -13,13 +13,15 @@ def mult(a,b):
                 l.append(eldevar)
                 eldevar = 0
         m = l[::-1]
-        l =[]
+        l = []
+        print
+    print m
     sum = 0
     for l in m:
         sum+=l
 
     return sum
 
-print mult(2,1000)
+print mult(11,3)
 
 
