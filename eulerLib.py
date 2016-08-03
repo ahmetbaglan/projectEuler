@@ -122,4 +122,15 @@ def perm(l):
     return out
 
 
+def is_prime(number):
+    if number % 2 == 0:
+        return False
+    max_possible_factor = int(number ** 0.5)
+    for i in range(3, max_possible_factor + 1, 2):
+        if number % i == 0:
+            return False
+    return True
+
+
+
 
