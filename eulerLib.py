@@ -132,5 +132,29 @@ def is_prime(number):
     return True
 
 
+def power(a,b, isStr = False):
+    m = str(a)
+    now = 0
+    l = []
+    eldevar = 0
+    for i in range(b-1):
+
+        for k in range(len(m)-1,-1,-1):
+            now = int(m[k]) * a + eldevar
+            eldevar = now/10
+            l.append(now%10)
+            if(k == 0 and eldevar != 0):
+                l.append(eldevar)
+                eldevar = 0
+        m = l[::-1]
+        l = []
+
+
+    out = ''
+    for c in m:
+        out+=str(c)
+    if(isStr):
+        return out
+    return int(out)
 
 
